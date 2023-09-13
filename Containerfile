@@ -21,6 +21,7 @@ RUN   ln -fs /bin/sh /usr/bin/sh && \
 # Custom Command
 ENV ENV=~/.profile
 
+RUN   cd ~/
 RUN   wget https://raw.githubusercontent.com/sudofox/shell-mommy/master/shell-mommy.sh
 RUN   chmod a+x shell-mommy.sh
 RUN   find ~/ -type f | grep "shell-mommy.sh" >> ~/.profile
