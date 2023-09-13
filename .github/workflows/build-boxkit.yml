@@ -11,7 +11,7 @@ on:
     paths-ignore:
       - '**/README.md'
 env:
-    IMAGE_NAME: 5pine
+    IMAGE_NAME: lfs
     IMAGE_TAGS: latest
     IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
 
