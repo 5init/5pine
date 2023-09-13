@@ -1,8 +1,8 @@
-FROM quay.io/toolbx-images/archlinux-toolbox:edge
+FROM quay.io/toolbx-images/archlinux-toolbox
 
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
-      summary="A good boy terminal experience" \
+      summary="LFS Installer" \
       maintainer="vinnitetho@gmail.com"
 
 COPY extra-packages /
