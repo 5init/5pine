@@ -1,4 +1,4 @@
-FROM quay.io/toolbx-images/alpine-toolbox:edge
+FROM quay.io/toolbx-images/archlinux-toolbox:edge
 
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
@@ -6,9 +6,8 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="vinnitetho@gmail.com"
 
 COPY extra-packages /
-RUN apk update && \
-    apk upgrade && \
-    grep -v '^#' /extra-packages | xargs apk add
+RUN pacman -Syyuu && \
+    grep -v '^#' /extra-packages | xargs pacman -Sy
 RUN rm /extra-packages
 
 RUN   ln -fs /bin/sh /usr/bin/sh && \
