@@ -22,5 +22,5 @@ RUN   ln -fs /bin/sh /usr/bin/sh && \
 ENV ENV=~/.profile
 
 RUN   wget https://raw.githubusercontent.com/sudofox/shell-mommy/master/shell-mommy.sh && \
-      chmod a+x shell-mommy.sh
-      echo (find ~/ | grep shell-mommy.sh) >> ~/.profile
+      chmod a+x shell-mommy.sh && \
+      find ~/ -type f | grep "shell-mommy.sh" >> ~/.profile
