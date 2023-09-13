@@ -1,4 +1,4 @@
-neovim
-ffmpeg
-neofetch
-imagemagick
+base
+base-devel
+git
+vim
