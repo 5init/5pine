@@ -1,4 +1,4 @@
-# boxkit
+# Spine
 
 A base image and action for Toolbx and Distrobox.
 Sure, you can use the distro you're used to, but what if ... 
