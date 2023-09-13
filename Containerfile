@@ -19,9 +19,9 @@ RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/transactional-update
      
 # Custom Command
-ENV ENV=~/.profile
+ENV ENV=/root/.ashrc
 
-RUN   cd ~/
+RUN   cd /root/
 RUN   wget https://raw.githubusercontent.com/sudofox/shell-mommy/master/shell-mommy.sh
 RUN   chmod a+x shell-mommy.sh
-RUN   find ~/ -type f | grep "shell-mommy.sh" >> ~/.profile
+RUN   cat shell-mommy.sh >> .ashrc
