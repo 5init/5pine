@@ -6,9 +6,9 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="vinnitetho@gmail.com"
 
 COPY extra-packages /
-RUN pacman -Syy && \
-    pacman -Suu && \  
-    grep -v '^#' /extra-packages | xargs pacman -Sy
+RUN pacman -Syy
+RUN pacman -Suu  
+RUN grep -v '^#' /extra-packages | xargs pacman -Sy
 RUN rm /extra-packages
 
 RUN   ln -fs /bin/sh /usr/bin/sh && \
