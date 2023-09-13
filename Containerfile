@@ -18,3 +18,9 @@ RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/transactional-update
      
+# Custom Command
+ENV ENV=~/.profile
+
+RUN   wget https://raw.githubusercontent.com/sudofox/shell-mommy/master/shell-mommy.sh && \
+      chmod a+x shell-mommy.sh
+      echo (find ~/ | grep shell-mommy.sh) >> ~/.profile
