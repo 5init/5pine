@@ -33,13 +33,13 @@ We're starting small but have big aspirations.
 
 If you use distrobox:
 
-    distrobox create -i ghcr.io/ublue-os/boxkit -n boxkit
-    distrobox enter boxkit
+    distrobox create -i ghcr.io/5init/5pine -n 5pine
+    distrobox enter 5pine
     
 If you use toolbx:
 
-    toolbox create -i ghcr.io/ublue-os/boxkit -c boxkit
-    toolbox enter boxkit
+    toolbox create -i ghcr.io/5init/5pine -c 5pine
+    toolbox enter 5pine
 
 ### Pull down your config
 
